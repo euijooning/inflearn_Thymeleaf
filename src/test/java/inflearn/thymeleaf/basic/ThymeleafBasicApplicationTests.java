@@ -1,4 +1,4 @@
-package inflearn.thymeleaf_basic;
+package inflearn.thymeleaf.basic;
 
 import org.junit.jupiter.api.Test;
 import org.springframework.boot.test.context.SpringBootTest;
