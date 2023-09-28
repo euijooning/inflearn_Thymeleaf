@@ -127,6 +127,12 @@ public class BasicController {
     }
 
 
+    @GetMapping("/layout")
+    public String layout() {
+        return "template/layout/layoutMain";
+    }
+
+
 
 
     @Component("helloBean")

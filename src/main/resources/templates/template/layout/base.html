@@ -1,0 +1,27 @@
+<html xmlns:th="http://www.thymeleaf.org">
+<head th:fragment="common_header(title,links)">
+    <!--
+        이 코드는 Thymeleaf 템플릿에서 공통 헤더 부분을 정의하는 부분입니다.
+        템플릿 프래그먼트로 common_header라는 이름을 가지며, title과 links라는 파라미터를 받습니다.
+
+        title 파라미터:
+        - title 파라미터로 전달받은 값으로 웹 페이지의 타이틀을 설정합니다.
+        - <title th:replace="${title}"> 태그를 사용하여 웹 페이지의 타이틀을 동적으로 설정합니다.
+
+        공통 스타일 및 스크립트:
+        - 공통 CSS 스타일 시트, favicon, JavaScript 스크립트를 로드합니다.
+        - 이러한 공통 리소스는 모든 웹 페이지에서 공유되며, 여기서는 Thymeleaf의 URL 표현식(th:href, th:src)을 사용하여 경로를 지정하고 있습니다.
+
+        추가적인 링크:
+        - 파라미터로 전달받은 links를 th:block을 통해 동적으로 추가합니다.
+    -->
+    <title th:replace="${title}">레이아웃 타이틀</title>
+    <!-- 공통 CSS 스타일 시트 -->
+    <link rel="stylesheet" type="text/css" media="all" th:href="@{/css/awesomeapp.css}">
+    <!-- 공통 favicon -->
+    <link rel="shortcut icon" th:href="@{/images/favicon.ico}">
+    <!-- 공통 JavaScript 스크립트 -->
+    <script type="text/javascript" th:src="@{/sh/scripts/codebase.js}"></script>
+    <!-- 추가적인 링크 (파라미터로 전달받은 links를 삽입) -->
+    <th:block th:replace="${links}" />
+</head>

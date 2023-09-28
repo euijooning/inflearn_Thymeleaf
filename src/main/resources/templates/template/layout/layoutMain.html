@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head th:replace="template/layout/base :: common_header(~{::title},~{::link})">
+    <!--
+        이 코드는 Thymeleaf 템플릿에서 기본 레이아웃 템플릿을 사용하는 예제입니다.
+        기본 레이아웃 템플릿인 "template/layout/base"의 "common_header" 템플릿 프래그먼트를 현재 페이지의 헤더로 대체합니다.
+
+        title:
+        - "메인 타이틀"로 설정된 현재 페이지의 타이틀을 설정합니다.
+
+        link:
+        - "/css/bootstrap.min.css"와 "/themes/smoothness/jquery-ui.css" 두 개의 스타일 시트를 로드합니다.
+    -->
+    <title>메인 타이틀</title>
+    <link rel="stylesheet" th:href="@{/css/bootstrap.min.css}">
+    <link rel="stylesheet" th:href="@{/themes/smoothness/jquery-ui.css}">
+</head>
+<body>
+메인 컨텐츠
+</body>
+</html>
